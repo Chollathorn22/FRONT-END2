@@ -1,5 +1,5 @@
 const express = require('express');
-const Sequelize = require('axios');
+const axios = require('axios');
 const app = express();
 var bodyParser = require('body-parser');
 
@@ -16,7 +16,7 @@ app.set(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 
-app.use(express.static(_dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 app.get("/", async (req, res) => {
     try {
